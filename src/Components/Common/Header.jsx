@@ -64,7 +64,7 @@ const Header = () => {
 
   return (
     <>
-      <AppBar>
+      <AppBar position="static">
         <StyledToolbar>
           <Logo src={logoURL} alt="logo" />
           <Box onClick={handleClick}>
