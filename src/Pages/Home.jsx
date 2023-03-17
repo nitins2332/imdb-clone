@@ -3,7 +3,7 @@ import Header from "../Components/Common/Header";
 import UpNext from "../Components/UpNext";
 
 import { categoryMovies } from "../Services/Api";
-import { NOWPLAYING_API_URL, TOPRATED_API_URL } from "../Constants/Constant";
+import { NOWPLAYING_API_URL } from "../Constants/Constant";
 
 import { Box, styled } from "@mui/material";
 import Banner from "../Components/Banner";

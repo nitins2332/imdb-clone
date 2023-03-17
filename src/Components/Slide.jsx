@@ -19,10 +19,10 @@ const responsive = {
   },
 };
 
-const StyledBanner = styled("img")`
-  width: 100%;
-  margin-top: 20px;
-`;
+const StyledBanner = styled("img")({
+  width: "100%",
+  marginTop: "20px",
+});
 
 const MovieTitle = styled(Typography)`
   color: #fff;

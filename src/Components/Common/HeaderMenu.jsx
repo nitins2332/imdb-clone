@@ -1,6 +1,9 @@
 import React from "react";
 import { Menu, MenuItem } from "@mui/material";
 
+import { Link } from "react-router-dom";
+import { routhPath } from "../../Constants/Route";
+
 const HeaderMenu = ({ open, handleClose }) => {
   const openMenu = Boolean(open);
 
@@ -14,9 +17,24 @@ const HeaderMenu = ({ open, handleClose }) => {
         "aria-labelledby": "basic-button",
       }}
     >
-      <MenuItem onClick={handleClose}>Popular</MenuItem>
-      <MenuItem onClick={handleClose}>Top Rated</MenuItem>
-      <MenuItem onClick={handleClose}>Upcoming</MenuItem>
+      <Link
+        to={`${routhPath.categories}?category=popular`}
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        <MenuItem onClick={handleClose}>Popular</MenuItem>
+      </Link>
+      <Link
+        to={`${routhPath.categories}?category=toprated`}
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        <MenuItem onClick={handleClose}>Top Rated</MenuItem>
+      </Link>
+      <Link
+        to={`${routhPath.categories}?category=upcoming`}
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        <MenuItem onClick={handleClose}>Upcoming</MenuItem>
+      </Link>
     </Menu>
   );
 };
