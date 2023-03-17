@@ -10,3 +10,9 @@ export const UPCOMING_API_URL = `https://api.themoviedb.org/3/movie/upcoming?api
 export const TOPRATED_API_URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US`;
 
 export const NOWPLAYING_API_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US`;
+
+export const moviesType = {
+  upcoming: "Upcoming",
+  toprated: "Top Rated",
+  popular: "Popular",
+};
