@@ -10,6 +10,10 @@ import {
 } from "@mui/material";
 import { logoURL } from "../../Constants/Constant";
 
+// import { Link } from "react-router-dom";
+import { routhPath } from "../../Constants/Route";
+import { useNavigate } from "react-router-dom";
+
 import { Menu, BookmarkAdd, ArrowDropDown } from "@mui/icons-material";
 
 // Component
@@ -49,10 +53,13 @@ const InputSearchField = styled(InputBase)`
 
 const Logo = styled("img")({
   width: 64,
+  cursor: "pointer",
 });
 
 const Header = () => {
   const [open, setOpen] = useState(null);
+
+  const navigation = useNavigate();
 
   const handleClick = (event) => {
     setOpen(event.currentTarget);
@@ -66,7 +73,12 @@ const Header = () => {
     <>
       <AppBar position="static">
         <StyledToolbar>
-          <Logo src={logoURL} alt="logo" />
+          <Logo
+            src={logoURL}
+            alt="logo"
+            onClick={() => navigation(routhPath.home)}
+          />
+
           <Box onClick={handleClick}>
             <Menu />
             <Typography>Menu</Typography>
